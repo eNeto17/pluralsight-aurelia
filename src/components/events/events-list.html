@@ -1,0 +1,29 @@
+<template>
+  <h4>Event List</h4>
+  <i class="fa fa-spinner fa-spin" show.bind="router.isNavigating"></i>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>No</th>
+        <th>Title</th>
+        <th>Speaker</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody repeat.for="eventItem of events" class="${eventItem.id}">
+    <!--<compose model.bind="eventItem" view-model="components/events/event-item" ></compose>-->
+      <tr>
+        <td>${eventItem.id}</td>
+        <td>${eventItem.title}</td>
+        <td class="text-nowrap">${eventItem.speaker}</td>
+        <td class="text-nowrap">${eventItem.dateTime | dateFormat}</td>
+        <td><a href.bind="eventItem.detailUrl" class="btn btn-dark">Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+<!--  <div repeat.for="eventItem of events">
+    <compose model.bind="eventItem" view-model="components/events/event-item"></compose>
+  </div>-->
+</template>

@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Senior .NET programmer needed",
+    "location": {
+      "city": "Alexandria",
+      "state": "VA"
+    },
+    "jobSkills": [".NET", "C#"],
+    "jobType": "Full Time",
+    "needDate": "2016/01/16",
+    "description": "Top notch senior .NET programmer needed for highly competetive environment. We eat our young. Come join us and rejoice in giving up any semblance of a personal life you may have once had. 30 years .NET experience required."
+  },
+  {
+    "title": "COBOL Migration Engineer",
+    "location": {
+      "city": "Chicago",
+      "state": "IL"
+    },
+    "jobSkills": ["COBOL", "JavaScript", "HTML"],
+    "jobType": "Contract",
+    "needDate": "2016/04/01",
+    "description": "Business critical enterprise expert system application needs to be migrated from mainframe COBOL to HTML JavaScript. It took us 10 years to develop this code, so we figure we can migrate it all to web technologies in about 6 months. After that we will keep you busy building mind numbing internal departmental web portals."
+  }
+]

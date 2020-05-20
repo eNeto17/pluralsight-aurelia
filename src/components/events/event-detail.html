@@ -1,0 +1,23 @@
+<template>
+  <require from="../../common/custom-attributes/speaker-image"></require>
+  <h4>Event Detail</h4>
+  <div class="row">
+    <div class="col-md-1">
+      <!-- src.bind="'../../../images/speakers/' + eventDetail.image" -->
+      <img speaker-img="image-name.bind: eventDetail.image; is-mvp.bind: eventDetail.isMvp" style="width: 100%; max-width: 200px" />
+    </div>
+    <div class="col-md-11">
+      <h4>${eventDetail.title}</h4>
+      <h5>Date: ${eventDetail.dateTime | dateFormat:'MM/DD/YYYY HH:mm'} (${eventDetail.speaker})</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      ${eventDetail.description}
+    </div>
+  </div>
+  <br>
+  <button class="btn btn-dark" click.delegate='editEvent(eventDetail)' type="button">Edit</button>
+  <a class="btn btn-dark" route-href="route:home">Back to List</a>
+
+</template>

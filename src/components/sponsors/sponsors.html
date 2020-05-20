@@ -1,0 +1,7 @@
+<template>
+  <h4>Sponsors</h4>
+  <span>Binding Behavior</span>
+  <require from="../../common/interceptors/interceptor"></require>
+  <input type="text" value.bind="someProperty & interceptor:myinterceptor"/>
+  <div>${someProperty}</div>
+</template>

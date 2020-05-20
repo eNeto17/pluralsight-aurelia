@@ -1,0 +1,27 @@
+<template>
+	<ux-dialog>
+
+		<ux-dialog-header>
+		  <h3>Edit Event</h3>
+		</ux-dialog-header>
+
+		<ux-dialog-body>
+			<div class="form-group">
+				<label for="title">Title</label>
+				<input type="text" value.bind="eventDetail.title"
+				class="form-control" id="title" placeholder="Title">
+			</div>
+			<div class="form-group">
+				<label for="description">Description</label><br/>
+				<textarea class="form-control" id="description" name="description" value.bind="eventDetail.description" rows="4" cols="50"></textarea>
+			</div>
+		</ux-dialog-body>
+
+		<ux-dialog-footer>
+			<button type="button" class="btn btn-dark" click.delegate="save()">Save</button>
+			<button type="button" class="btn btn-dark" click.delegate="cancel()">Cancel</button>
+		</ux-dialog-footer>
+
+	</ux-dialog>
+	
+</template>

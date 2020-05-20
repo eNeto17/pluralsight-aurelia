@@ -1,0 +1,11 @@
+<template>
+  <h3>Events</h3>
+  <div class="mb-3">
+    <ul class="nav nav-tabs">
+      <li repeat.for="route of router.navigation" class="nav-item">
+        <a class="${route.isActive ? 'active' : ''} nav-link " href.bind="route.href">${route.title}</a>
+      </li>
+    </ul>
+  </div>
+  <router-view></router-view>
+</template>

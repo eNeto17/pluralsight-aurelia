@@ -1,0 +1,22 @@
+<template>
+  <require from="./assets/styles/main.css"></require>
+  <div class="container-fluid">
+    <nav-menu router.bind="router"></nav-menu>
+  </div>
+
+  <div class="container">
+    <div style="background: darkseagreen" show.bind='notification1' click.delegate='clearNotification()'>Notification Received: ${notification}</div>
+    <div style="background: lightskyblue" show.bind='notification2' click.delegate='clearNotification()'>Notification Received: ${notification}</div>
+
+    <i class="fa fa-spinner fa-spin" show.bind="router.isNavigating"></i>
+
+    <div class="row">
+      <div class="col-10">
+        <router-view name="mainContent"></router-view>
+      </div>
+      <div class="col-2">
+        <router-view name="sideBar"></router-view>
+      </div>
+    </div>
+  </div>
+</template>

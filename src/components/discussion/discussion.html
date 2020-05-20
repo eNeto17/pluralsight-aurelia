@@ -1,0 +1,22 @@
+<template>
+  <h4>Discussion</h4>
+  <h6>Total number of Items: ${count}</h6>
+
+  <form class="form-inline" submit.trigger="addTodo()">
+    <input class="form-control" type="text" value.bind="itemDescription" />
+    <button class="btn btn-dark btn-sm mx-1" type="submit" disabled.bind="!itemDescription">Add Item</button>
+    <button class="btn btn-dark btn-sm mx-1" click.trigger="sortTodo()">Sort Asc/Desc</button>
+    <button class="btn btn-dark btn-sm mx-1" click.trigger="resetTodo()">Reset</button>
+  </form>
+
+  <h6 class="mt-4">Item List:</h6>
+  <ul>
+    <li repeat.for="item of items">
+      <input class="form-check-input" type="checkbox" checked.bind="item.done" change.trigger="countTodos()" />
+      <span css="text-decoration: ${item.done ? 'line-through' : 'none'}">
+        ${item.description} - ${item.done}
+      </span>
+      <button class="btn btn-dark btn-sm" click.trigger="removeTodo(item)">Remove</button>
+    </li>
+  </ul>
+</template>
